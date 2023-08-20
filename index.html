@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style>
+      .carousel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh; /* Adjust this value as needed */
+        background-color: #f8f9fa;
+      }
+
+      .carousel-inner img {
+        max-height: 300px; /* Adjust this value as needed */
+        margin: 0 auto;
+      }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- <% if (locals.fileLink != null) { %>
+    <div style="margin-bottom: 1rem">
+      Your file is upload
+      <a href="<%= locals.fileLink %>"><%= locals.fileLink %></a>
+    </div>
+    <% } %> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">file sharing resource</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="howtouse.html">how to use</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">additional info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">contact us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="carousel-container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="1.jpg" alt="Slide 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="2.jpg" alt="Slide 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="3.jpg" alt="Slide 3" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="jumbotron text-center bg-light text-dark">
+      <h1><br /></h1>
+      <h1>upload or drag your file</h1>
+      <br />
+      <p>add password if required</p>
+      <h1><br /></h1>
+    </div>
+    <br /><br /><br /><br /><br />
+    <form
+      action="/upload"
+      method="post"
+      style="
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: auto 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+      "
+      enctype="multipart/form-data"
+    >
+      <label for="file">File:</label>
+      <input type="file" id="file" name="file" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <button
+        class="btn btn-primary btn-lg"
+        style="grid-column: span 2"
+        type="submit"
+      >
+        Share
+      </button>
+    </form>
+    <br /><br /><br /><br />
+    <div class="container-fluid">
+      <div class="row bg-dark text-white text-center py-5">
+        <div class="col-md-12">
+          <h3>F.S.R</h3>
+          <p>Aloha</p>
+          <div class="mt-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
